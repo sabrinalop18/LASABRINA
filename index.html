@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LASABRINA | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="encabezado">
+
+    <a href="#" class="logo" id="logo">
+      LASABRINA.
+    </a>
+
+    <nav>
+      <a href="#proyectos" id="enlace-proyectos">
+        PROYECTOS
+      </a>
+
+      <a href="#sobre-mi" id="enlace-sobre-mi">
+        SOBRE MÍ
+      </a>
+
+      <a href="#contacto" id="enlace-contacto">
+        CONTACTO
+      </a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- PÁGINA PRINCIPAL -->
+    <section id="inicio">
+
+      <!-- PRESENTACIÓN -->
+      <div class="presentacion">
+
+        <p>PORTFOLIO CREATIVO / 2026</p>
+
+        <h1>LASABRINA.</h1>
+
+        <div class="presentacion-pie">
+          <span>
+            DISEÑO · FOTOGRAFÍA · DESARROLLO WEB
+          </span>
+
+          <span>
+            MONTEVIDEO, URUGUAY
+          </span>
+        </div>
+
+      </div>
+
+      <!-- PROYECTOS -->
+      <section id="proyectos" class="seccion-proyectos">
+
+        <div class="seccion-titulo">
+          <h2>PROYECTOS</h2>
+          <span>(08)</span>
+        </div>
+
+        <div class="filtros">
+
+          <button
+            class="filtro activo"
+            data-filtro="todos"
+          >
+            TODOS
+          </button>
+
+          <button
+            class="filtro"
+            data-filtro="diseno"
+          >
+            DISEÑO
+          </button>
+
+          <button
+            class="filtro"
+            data-filtro="fotografia"
+          >
+            FOTOGRAFÍA
+          </button>
+
+          <button
+            class="filtro"
+            data-filtro="web"
+          >
+            DESARROLLO WEB
+          </button>
+
+        </div>
+
+        <div
+          class="grilla-proyectos"
+          id="grilla-proyectos"
+        >
+          <!-- Los proyectos aparecen con JavaScript -->
+        </div>
+
+      </section>
+
+      <!-- SOBRE MÍ -->
+      <section id="sobre-mi" class="sobre-mi">
+
+        <div class="sobre-mi-encabezado">
+
+          <span>UN POCO SOBRE MÍ</span>
+
+          <h2>HOLA, SOY SABRINA.</h2>
+
+        </div>
+
+        <div class="sobre-mi-contenido">
+
+          <p>
+            Estudio Diseño de Comunicación Visual
+            en la FADU y me apasiona crear,
+            aprender y transformar ideas en proyectos.
+          </p>
+
+          <p>
+            Me interesan el diseño gráfico,
+            la fotografía y el desarrollo web,
+            área en la que estoy profundizando
+            mis conocimientos de programación.
+          </p>
+
+          <p>
+            Me gusta combinar lo visual con lo funcional,
+            buscando que cada proyecto no solo se vea bien,
+            sino que también funcione bien.
+          </p>
+
+          <p>
+            Este portfolio reúne un poco de lo que hago
+            y de lo que soy.
+          </p>
+
+        </div>
+
+        <div class="sobre-mi-datos">
+
+          <div>
+            <span>FORMACIÓN</span>
+            <p>Diseño de Comunicación Visual · FADU</p>
+          </div>
+
+          <div>
+            <span>ÁREAS</span>
+            <p>
+              Diseño gráfico · Fotografía · Desarrollo web
+            </p>
+          </div>
+
+          <div>
+            <span>UBICACIÓN</span>
+            <p>Montevideo, Uruguay</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="contacto">
+
+        <span class="contacto-etiqueta">
+          ¿TENÉS UN PROYECTO EN MENTE?
+        </span>
+
+        <h2>HABLEMOS.</h2>
+
+        <p>
+          ¿Tenés una idea, una propuesta o simplemente
+          querés ponerte en contacto? ¡Escribime!
+        </p>
+
+        <div class="contacto-enlaces">
+
+          <!-- CORREO ELECTRÓNICO -->
+          <div class="contacto-item">
+
+            <span>CORREO ELECTRÓNICO</span>
+
+            <a href="mailto:Sabrinalop18@gmail.com">
+              Sabrinalop18@gmail.com ↗
+            </a>
+
+          </div>
+
+          <!-- WHATSAPP -->
+          <div class="contacto-item">
+
+            <span>TELÉFONO / WHATSAPP</span>
+
+            <a
+              href="https://wa.me/59892066060"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              092 066 060 ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+    <!-- PÁGINA INDIVIDUAL DE PROYECTO -->
+    <section id="detalle-proyecto" class="oculto">
+
+      <button id="volver" class="boton-volver">
+        ← VOLVER A PROYECTOS
+      </button>
+
+      <div class="detalle-encabezado">
+
+        <p id="detalle-categoria"></p>
+
+        <h2 id="detalle-titulo"></h2>
+
+        <p id="detalle-subtitulo"></p>
+
+      </div>
+
+      <div id="detalle-imagen-principal"></div>
+
+      <div class="detalle-descripcion">
+
+        <span>SOBRE EL PROYECTO</span>
+
+        <p id="detalle-texto"></p>
+
+      </div>
+
+      <div
+        id="detalle-galeria"
+        class="galeria-detalle"
+      ></div>
+
+      <div id="detalle-enlace"></div>
+
+      <div class="detalle-final">
+
+        <button id="siguiente-proyecto">
+          SIGUIENTE PROYECTO →
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+
+    <span>© 2026 LASABRINA.</span>
+
+    <span>DISEÑADO Y DESARROLLADO CON ♥</span>
+
+  </footer>
+
+  <!-- NAVEGACIÓN DEL MENÚ -->
+  <script>
+    document.getElementById("enlace-sobre-mi")
+      .addEventListener("click", function(evento) {
+        evento.preventDefault();
+        volverAlInicio();
+
+        document.getElementById("sobre-mi")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+
+    document.getElementById("enlace-contacto")
+      .addEventListener("click", function(evento) {
+        evento.preventDefault();
+        volverAlInicio();
+
+        document.getElementById("contacto")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+  </script>
+
+</body>
+</html>
